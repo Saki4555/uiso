@@ -1,23 +1,80 @@
 ---
-title: Add-on Name
-description: One-line summary of what it adds to Shadcn
+title: TEST UI
+description: Unstyled, composable UI primitives.
 ---
 
+import { MoveRight } from "lucide-react";
 
-import ShadcnAddonDetails from '@/components/ShadcnAddonDetails'
+## Browse components
 
-<ShadcnAddonDetails
-  version="diceui"
-  license="MIT"
-  minShadcn="—"
-  lastUpdated="Jun 5 2025"
-  componentCount={10}
-  topPicks={[
-    { name: 'Combobox', reason: 'Accessible input dropdown with ARIA support', href: 'https://www.diceui.com/docs/combobox' },
-    { name: 'CheckboxGroup', reason: 'Multi-select group with keyboard nav', href: 'https://www.diceui.com/docs/checkbox-group' },
-  ]}
-  blocks={[
-    { name: 'Build custom form with primitives', href: 'https://www.diceui.com/docs/examples' }
-  ]}
-  kits={[]}
-/>
+<Card title="Official Doc" href="https://www.google.com" className="">
+
+<p className="flex items-center gap-3 pt-2 text-base font-semibold">   <MoveRight strokeWidth={1.5}/> Google</p>
+<p class=" flex justify-end"> License: <span className="text-red-600 tracking-wider ml-1"> MIT</span></p>
+</Card>
+
+
+
+## About this add-on
+<Callout>  
+<div className="prose   divide-y-1 space-y-2 sp">
+          <div className="py-2">
+          ### Components
+            <div>
+          <span className="font-semibold text-lg">10 total</span>
+              <span className="italic"> — count based on
+               visible sidebar entries. Some components include multiple internal
+              parts or variants.</span>
+            </div>
+          </div>
+
+          <div className="py-2">
+            ### Blocks / Sections
+            <div>
+              <span className="font-semibold mr-2 text-lg">10 total</span>
+              <span className=" text-green-400 mr-2 py-1 px-2 rounded-full border ">3 Free</span>
+              <span className="text-red-500  py-1 px-2 rounded-full border">7 Paid</span>
+            </div>
+          </div>
+
+          <div className="py-2">
+             ### Templates / Starter kits
+            <div>
+              <span className="font-semibold mr-2 text-lg">10 total</span>
+              <span className=" text-green-400 mr-2 py-1 px-2 rounded-full border ">3 Free</span>
+              <span className="text-red-500  py-1 px-2 rounded-full border">7 Paid</span>
+            </div>
+          </div>
+        </div>
+
+ </Callout>
+
+
+## Top picks (personal favorites)
+ <Cards>
+  <Card title="Lamda Button" href="/">
+  
+ <p className="flex items-center gap-3 pt-2 text-xs font-semibold">   <MoveRight strokeWidth={2} size={12} /> Visit docs</p>
+
+</Card>
+  <Card title="Lamda " href="/">
+  
+  <p className="flex items-center gap-3 pt-2 text-xs font-semibold">   <MoveRight strokeWidth={2} size={12} /> Visit docs</p>
+
+</Card>
+  <Card title="Lamda " href="/">
+  
+ <p className="flex items-center gap-3 pt-2 text-xs font-semibold">   <MoveRight strokeWidth={2} size={12} /> Visit docs</p>
+
+</Card>
+  <Card title="Lamda " href="/">
+  
+ <p className="flex items-center gap-3 pt-2 text-xs font-semibold">   <MoveRight strokeWidth={2} size={12} /> Visit docs</p>
+
+</Card>
+  <Card title="Lamda " href="/">
+  
+  <p className="flex items-center gap-3 pt-2 text-xs font-semibold">   <MoveRight strokeWidth={2} size={12} /> Visit docs</p>
+
+</Card>
+ </Cards>

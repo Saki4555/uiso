@@ -1,3 +1,4 @@
+import UITestComponent from '@/components/ui-test-component';
 import Link from 'next/link';
 
 export default function HomePage() {
@@ -15,6 +16,11 @@ export default function HomePage() {
         </Link>{' '}
         and see the documentation.
       </p>
+
+      {/* i will test ui here--------------------------------------- */}
+      <div className='py-12 px-56'>
+        <UITestComponent />
+      </div>
     </main>
   );
 }
