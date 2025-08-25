@@ -8,35 +8,27 @@ import {
 import { notFound } from "next/navigation";
 import { createRelativeLink } from "fumadocs-ui/mdx";
 import { getMDXComponents } from "@/mdx-components";
-import { getGithubLastEdit } from 'fumadocs-core/server';
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
 }) {
   const params = await props.params;
   const page = source.getPage(params.slug);
-  
-// const page = source.getPage(['...']);
 
   if (!page) notFound();
-
+  const githubPath = ["content", "docs", ...(params.slug ?? [])].join("/");
+  console.log({ githubPath });
   const MDXContent = page.data.body;
-  const time = await getGithubLastEdit({
-    owner: "Saki4555",
-    repo: "uiso",
-    path: `content/docs/${page.path}`,
-    
-    
-  });
-  
-  console.log(page.path)
+
+  console.log("Resolved path for GitHub lookup:", page.path);
 
   return (
     <DocsPage
       toc={page.data.toc}
       full={page.data.full}
-      lastUpdate={time ? new Date(time) : undefined}
-
+      lastUpdate={
+        page.data.lastModified ? new Date(page.data.lastModified) : undefined
+      }
     >
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription className="text-sm">
@@ -49,7 +41,6 @@ export default async function Page(props: {
             a: createRelativeLink(source, page),
           })}
         />
-      
       </DocsBody>
     </DocsPage>
   );
