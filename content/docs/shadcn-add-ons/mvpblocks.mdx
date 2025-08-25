@@ -1,0 +1,69 @@
+---
+title: Mvpblocks
+description: An open-source, copy-paste-ready UI component library built using Next.js, Tailwind CSS, shadcn/ui, and Framer Motion.
+---
+
+import { MoveRight } from "lucide-react";
+import { mvpBlocksStats } from "@/lib/shadcn-addons-data.js";
+import StatsBadge from "@/components/stats-badge.tsx";
+
+## Browse components
+
+<Card title="Official Doc" href="https://blocks.mvp-subha.me/" className="">
+
+<p className="flex items-center gap-3 pt-2 text-base font-semibold text-rose-600">   <MoveRight strokeWidth={1.5}/> Mvpblocks</p>
+<p className=" flex justify-end"> License: <span className="text-red-600 tracking-wider ml-1"> BSD 3-Clause License</span></p>
+</Card>
+
+## About this add-on
+
+<Callout>  
+<div className="prose   divide-y-1 space-y-2 sp">
+          <div className="py-2">
+          ### Components and Effects
+            <div>
+         
+             
+              <StatsBadge total={mvpBlocksStats.components.total} free={mvpBlocksStats.components.free} paid={mvpBlocksStats.components.paid} />
+            </div>
+          </div>
+
+          <div className="py-2">
+            ### Blocks / Sections
+            <div>
+
+              <StatsBadge total={mvpBlocksStats.sections.total} free={mvpBlocksStats.sections.free} paid={mvpBlocksStats.sections.paid} />
+            </div>
+          </div>
+
+          <div className="py-2">
+             ### Templates / Starter kits
+            <div>
+
+              <StatsBadge total={mvpBlocksStats.templates.total} free={mvpBlocksStats.templates.free} paid={mvpBlocksStats.templates.paid} />
+            </div>
+          </div>
+        </div>
+
+ </Callout>
+
+## Top picks (personal favorites)
+
+ <Cards>
+  <Card className="border border-rose-900/50" title="Authentication Forms" href="https://blocks.mvp-subha.me/docs/forms/loginforms">
+  
+ <p className="flex items-center gap-3 pt-2 text-xs font-semibold">   <MoveRight strokeWidth={2} size={12} /> View Docs</p>
+
+</Card>
+  <Card className="border border-rose-900/50" title="Dot Card" href="https://blocks.mvp-subha.me/docs/cards/basic-cards">
+  
+ <p className="flex items-center gap-3 pt-2 text-xs font-semibold">   <MoveRight strokeWidth={2} size={12} /> View Docs</p>
+
+</Card>
+<Card className="border border-rose-900/50" title="Flip Card" href="https://blocks.mvp-subha.me/docs/cards/card-flip">
+  
+ <p className="flex items-center gap-3 pt-2 text-xs font-semibold">   <MoveRight strokeWidth={2} size={12} /> View Docs</p>
+
+</Card>
+  
+ </Cards>

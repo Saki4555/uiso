@@ -1,0 +1,55 @@
+---
+title: Magic UI
+description: An open-source library of 150+ animated React components built with TypeScript, Tailwind CSS, Framer Motion, and designed to integrate seamlessly with shadcn/ui.
+---
+
+import { MoveRight } from "lucide-react";
+import { magicUiStats } from "@/lib/shadcn-addons-data.js";
+import StatsBadge from "@/components/stats-badge.tsx";
+
+## Browse components
+
+<Card title="Official Doc" href="https://magicui.design/" className="">
+
+<p className="flex items-center gap-3 pt-2 text-base font-semibold">
+  <MoveRight className="text-gray-500" strokeWidth={1.5} />
+  <span className="bg-gradient-to-r from-indigo-400 via-fuchsia-400 to-yellow-200 bg-clip-text text-transparent">
+    Magic UI
+  </span>
+</p>
+
+<p className=" flex justify-end"> License: <span className="text-red-600 tracking-wider ml-1"> MIT License</span></p>
+</Card>
+
+## About this add-on
+
+<Callout>  
+<div className="prose   divide-y-1 space-y-2 sp">
+          <div className="py-2">
+          ### Components
+            <div>
+        <StatsBadge total={magicUiStats.components.total} free={magicUiStats.components.free} paid={magicUiStats.components.paid} />
+            </div>
+          </div>
+
+          <div className="py-2">
+            ### Blocks / Sections
+            <div>
+
+              <StatsBadge total={magicUiStats.sections.total} free={magicUiStats.sections.free} paid={magicUiStats.sections.paid} />
+            </div>
+          </div>
+
+          <div className="py-2">
+             ### Templates / Starter kits
+            <div>
+
+              <StatsBadge total={magicUiStats.templates.total} free={magicUiStats.templates.free} paid={magicUiStats.templates.paid} />
+            </div>
+          </div>
+        </div>
+
+ </Callout>
+
+## Top picks (personal favorites)
+<span>Work in progress...</span>
